@@ -78,15 +78,18 @@ class HomeController extends Controller
 `
 Finally, create a view file called "index.blade.php" in App/Modules/Admin/Views folder with following contents:
 
+
 `<h1>Welcome to Admin Module</h1>`
+
 
 Now, once we have folder and file structure defined we have to enable admin module:
 
 open config/modules.php file and add following line:
 
 
-`return [`
-`    'admin' => 'Admin Panel'`
-`];`
+`return [
+    'admin' => 'Admin Panel'
+];
+`
 
 Done, go to browser and hit your local website instance and see if you get "Welcome to Admin Module" message on your screen
