@@ -76,10 +76,10 @@ class HomeController extends Controller
     }
 }
 `
-Finally, create a view file called "index.blade.php" in App/Modules/Admin/Views folder with following contents:
+Finally, create a view file called "index.blade.php" in App/Modules/Admin/Views folder with following contents
 
 
-<br><h1>Welcome to Admin Module</h1>
+`<h1>Welcome to Admin Module</h1>`
 
 
 Now, once we have folder and file structure defined we have to enable admin module:
