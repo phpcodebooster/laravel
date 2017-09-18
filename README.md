@@ -25,12 +25,23 @@ return [
 That is it your module is now enabled for your project. Following will be the ideal
 structure for your admin module
 
-App<br>
-  |-- Admin<br>
-        |-- Controllers<br>
-        |-- Views<br>
-        |-- config.php<br>
-        |-- routes.php
+```
+laravel-project/
+    app/
+    └── Modules/
+        └── Admin/
+            ├── Controllers/
+            │   └── AdminController.php
+            ├── Models/
+            │   └── User.php
+            ├── Views/
+            │   └── index.blade.php
+            ├── Translations/
+            │   └── en/
+            │       └── example.php
+            ├── routes.php
+            └── config.php           
+```
         
 To access your module configuration use lowercase module name
 Ex. 
