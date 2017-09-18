@@ -37,7 +37,7 @@ class ServiceProvider extends RouteServiceProvider
         foreach ($plugins as $plugin => $desc)
         {
             $plugin_code   = str_replace('_', '', strtolower($plugin));
-            $plugin_path   = app_path(). '/Plugins/' .ucfirst($plugin_code). DIRECTORY_SEPARATOR;
+            $plugin_path   = app_path(). '/Modules/' .ucfirst($plugin_code). DIRECTORY_SEPARATOR;
             $plugin_config = $plugin_path. 'config.php';
 
             if( \File::exists($plugin_config) )
@@ -48,7 +48,7 @@ class ServiceProvider extends RouteServiceProvider
                 $this->loadTranslationsFrom($plugin_path.'Translations', $plugin_code);
 
                 $plugin_route = $plugin_path. 'routes.php';
-                $plugin_namespace = 'App\Plugins\\' .ucfirst($plugin_code). '\\Controllers';
+                $plugin_namespace = 'App\\Modules\\' .ucfirst($plugin_code). '\\Controllers';
 
                 if( \File::exists($plugin_route) )
                 {
