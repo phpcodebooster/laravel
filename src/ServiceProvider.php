@@ -22,16 +22,6 @@ class ServiceProvider extends RouteServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__. '/routes.php');
-        $this->loadMigrationsFrom(__DIR__. '/migrations');
-        $this->mergeConfigFrom(__DIR__.'/config.php', 'modules');
-        $this->loadTranslationsFrom(__DIR__.'/translations', 'modules');
-
-        $this->publishes([
-            __DIR__.'/translations' => resource_path('lang/vendor/modules')
-        ]);
-
-
         $plugins = config('modules', []);
 
         foreach ($plugins as $plugin => $desc)
@@ -56,5 +46,9 @@ class ServiceProvider extends RouteServiceProvider
                 }
             }
         }
+
+        $this->publishes([
+            __DIR__. '/config.php' => config_path('modules.php')
+        ]);
     }
 }
