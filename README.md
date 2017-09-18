@@ -85,9 +85,8 @@ Now, once we have folder and file structure defined we have to enable admin modu
 open config/modules.php file and add following line:
 
 
-`return [
-    'admin' => 'Admin Panel'
-];
-`
+`return [`
+`    'admin' => 'Admin Panel'`
+`];`
 
 Done, go to browser and hit your local website instance and see if you get "Welcome to Admin Module" message on your screen
