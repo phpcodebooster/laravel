@@ -16,11 +16,12 @@ laravel project
 - create a directory called Admin  in "App/Modules" folder ex. app/Modules/Admin
 - open config/modules.php file and add following line:
 
-`
+```php
 return [
   'admin' => 'Admin Module'
 ];
-`
+```
+
 That is it your module is now enabled for your project. Following will be the ideal
 structure for your admin module
 
@@ -34,15 +35,21 @@ App<br>
 To access your module configuration use lowercase module name
 Ex. 
 
-`$admin_config = config('admin');`
+```php
+$admin_config = config('admin');
+```
 
 To use admin views in your controller use:
 
-`return view('admin::index'); `
+```php
+return view('admin::index'); 
+```
 
 or
 
-`return view('admin::folder.file'); `       
+```php
+return view('admin::folder.file'); 
+```
 
 ### Sample Admin Module Code 
 
@@ -56,14 +63,16 @@ Create a file called "config.php" in App/Modules/Admin
 
 First, define a route in App/Modules/Admin/routes.php file as shown below:
 
-`Route::get('/', 'HomeController@index')->name('home');`
+```php
+Route::get('/', 'HomeController@index')->name('home');
+```
 
-Secondly, create a file called "HomeController.php" in App/Modules/Admin/Controllers with following contents:
-`
+Secondly, create a file called "HomeController.php" in App/Modules/Admin/Controllers with following contents
+
+```php
 <?php
 
 namespace App\Modules\Admin\Controllers;
-
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
@@ -71,25 +80,19 @@ class HomeController extends Controller
     public function index()
     {
         dd( config('modules') );
-
-        return view('admin::index');
     }
 }
-`
-
-Finally, create a view file called "index.blade.php" in App/Modules/Admin/Views folder with
-following content
-
-`<h1>Welcome to Admin Module</h1>`
+```
 
 Now, once we have folder and file structure defined we have to enable admin module:
 
 open config/modules.php file and add following line:
 
 
-`return [
+```php
+return [
     'admin' => 'Admin Panel'
 ];
-`
+```
 
-Done, go to browser and hit your local website instance and see if you get "Welcome to Admin Module" message on your screen
+Done, go to browser and hit your local website instance
