@@ -20,10 +20,7 @@
         "laravel": {
             "providers": [
                 "PCB\\Laravel\\ServiceProvider"
-            ],
-            "aliases": {
-                "PCBLaravel": "PCB\\Laravel\\Facade"
-            }
+            ]
         },
         "branch-alias": {
             "dev-master": "1.0-dev"
