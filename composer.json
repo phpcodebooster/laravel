@@ -11,7 +11,20 @@
             "email": "sandip254@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "PCB\\Laravel\\": "src/"
+        }
+    },
     "extra": {
+        "laravel": {
+            "providers": [
+                "PCB\\Laravel\\ServiceProvider"
+            ],
+            "aliases": {
+                "PCBLaravel": "PCB\\Laravel\\Facade"
+            }
+        },
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
