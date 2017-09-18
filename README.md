@@ -26,7 +26,7 @@ That is it your module is now enabled for your project. Following will be the id
 structure for your admin module
 
 ```
-laravel-project/
+project/
     app/
     └── Modules/
         └── Admin/
