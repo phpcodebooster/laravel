@@ -1,0 +1,19 @@
+{
+    "name": "phpcodebooster/laravel",
+    "description": "The Laravel Packages.",
+    "homepage": "https://learn2torials.com",
+    "keywords": ["framework", "laravel", "internationalization", "user managements", "timezones"],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Sandip Patel",
+            "email": "sandip254@gmail.com"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
