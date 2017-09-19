@@ -11,9 +11,9 @@ application.
 
 ### Active Features Documentation Links
 - [Laravel Modules v1.0](https://www.learn2torials.com/a/laravel-module-management)
+- [Laravel Internationalization v1.2](https://www.learn2torials.com/p/laravel-5-localization)
 
 
 ### Upcoming Features
 
-- [Laravel Internationalization v1.2](#)
 - [Laravel Time Zones v1.3](#)
