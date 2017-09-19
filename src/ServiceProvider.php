@@ -10,6 +10,7 @@
 */
 namespace PCB\Laravel;
 
+use PCBLaravel;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 
@@ -42,7 +43,9 @@ class ServiceProvider extends RouteServiceProvider
 
                 if( \File::exists($plugin_route) )
                 {
-                    Route::namespace($plugin_namespace)->group($plugin_path. 'routes.php');
+                    Route::prefix(PCBLaravel::setPrefix())
+                        ->namespace($plugin_namespace)
+                        ->group($plugin_path. 'routes.php');
                 }
             }
         }
