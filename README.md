@@ -5,4 +5,14 @@ which can be easily turn on/off then this is a good package for you.
 
 ### How to Install my package?
 
-Check out the docs at https://www.learn2torials.com/a/laravel-module-management
+This Package can be used for multipurpose make sure you read
+docs for each feature in order to make use of specific feature in your web
+application.
+
+- [Laravel Modules]: https://www.learn2torials.com/a/laravel-module-management
+
+
+### Upcoming Features
+
+- [Laravel Internationalization]: #
+- [Laravel Time Zones]: #
