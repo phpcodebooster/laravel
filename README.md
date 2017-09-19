@@ -9,10 +9,11 @@ This Package can be used for multipurpose make sure you read
 docs for each feature in order to make use of specific feature in your web
 application.
 
-- [Laravel Modules](https://www.learn2torials.com/a/laravel-module-management)
+### Active Features Documentation Links
+- [Laravel Modules v1.0](https://www.learn2torials.com/a/laravel-module-management)
 
 
 ### Upcoming Features
 
-- [Laravel Internationalization](#)
-- [Laravel Time Zones](#)
+- [Laravel Internationalization v1.2](#)
+- [Laravel Time Zones v1.3](#)
