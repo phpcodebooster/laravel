@@ -10,6 +10,7 @@
 
      // Authentication related settings
     'auth' => [
+        'enabled' => false,
         'user_redirect_route' => 'user_dashboard',
         'admin_redirect_route' => 'admin_dashboard'
     ],

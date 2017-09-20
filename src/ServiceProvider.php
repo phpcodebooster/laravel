@@ -56,9 +56,12 @@ class ServiceProvider extends RouteServiceProvider
             __DIR__. '/config.php' => config_path('modules.php')
         ]);
 
-        // Register Middlewares
-        $this->aliasMiddleware('guest', Middleware\RedirectIfAuthenticated::class);
-        $this->aliasMiddleware('admin', Middleware\AdminAuthenticated::class);
-        $this->aliasMiddleware('user', Middleware\UserAuthenticated::class);
+        // check if authentication module is on
+        if( config('modules.auth.enabled') )
+        {
+            $this->aliasMiddleware('guest', Middleware\RedirectIfAuthenticated::class);
+            $this->aliasMiddleware('admin', Middleware\AdminAuthenticated::class);
+            $this->aliasMiddleware('user', Middleware\UserAuthenticated::class);
+        }
     }
 }
