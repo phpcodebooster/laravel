@@ -23,7 +23,7 @@ class ServiceProvider extends RouteServiceProvider
      */
     public function boot()
     {
-        $plugins = config('modules', []);
+        $plugins = config('modules.enabled', []);
 
         foreach ($plugins as $plugin => $desc)
         {
@@ -50,8 +50,15 @@ class ServiceProvider extends RouteServiceProvider
             }
         }
 
+        // Register Migrations
+        $this->loadMigrationsFrom(__DIR__. '/Migrations');
         $this->publishes([
             __DIR__. '/config.php' => config_path('modules.php')
         ]);
+
+        // Register Middlewares
+        $this->aliasMiddleware('guest', Middleware\RedirectIfAuthenticated::class);
+        $this->aliasMiddleware('admin', Middleware\AdminAuthenticated::class);
+        $this->aliasMiddleware('user', Middleware\UserAuthenticated::class);
     }
 }
