@@ -14,14 +14,9 @@
  {
      use HandlesAuthorization;
 
-     public function allowed($user, $permission=null, $plugin=null)
+     public function allowed($user, $permission=null)
      {
-         // if user has no access to module
          $permission = $permission ?: request()->route()->getName();
-         if( $plugin && !config('modules.enabled.' .$plugin) ) {
-             return false;
-         }
-
          return $user->isSuperAdmin() ?: $user->checkPermission($permission);
      }
  }

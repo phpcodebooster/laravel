@@ -11,8 +11,11 @@
  {
      function has_module_permission($module, $permission)
      {
-         if (auth()->user()->can('allowed', $permission, $module))
-         {
+         if( $module && !config('modules.enabled.' .$module) ) {
+             return false;
+         }
+
+         if (auth()->user()->can('allowed', $permission)) {
              return true;
          }
 
