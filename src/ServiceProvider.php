@@ -55,13 +55,5 @@ class ServiceProvider extends RouteServiceProvider
         $this->publishes([
             __DIR__. '/config.php' => config_path('modules.php')
         ]);
-
-        // check if authentication module is on
-        if( config('modules.auth.enabled') )
-        {
-            $this->aliasMiddleware('guest', Middleware\RedirectIfAuthenticated::class);
-            $this->aliasMiddleware('admin', Middleware\AdminAuthenticated::class);
-            $this->aliasMiddleware('user', Middleware\UserAuthenticated::class);
-        }
     }
 }
