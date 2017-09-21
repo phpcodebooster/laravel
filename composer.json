@@ -14,7 +14,10 @@
     "autoload": {
         "psr-4": {
             "PCB\\Laravel\\": "src/"
-        }
+        },
+        "files": [
+            "src/LaravelHelper.php"
+        ]
     },
     "extra": {
         "laravel": {

@@ -11,6 +11,7 @@
 namespace PCB\Laravel;
 
 use PCBLaravel;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 
@@ -55,5 +56,8 @@ class ServiceProvider extends RouteServiceProvider
         $this->publishes([
             __DIR__. '/config.php' => config_path('modules.php')
         ]);
+
+        // register admin policy
+        Gate::define('allowed', 'PCB\Laravel\AdminPolicy@allowed');
     }
 }
