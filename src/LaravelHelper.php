@@ -22,3 +22,15 @@
          return false;
      }
  }
+
+ if (!function_exists('has_permission') )
+ {
+     function has_permission($permission)
+     {
+         if( !auth()->user()->can('allowed', $permission) )
+         {
+             abort(403, 'You are not allowed to access this area.');
+         }
+     }
+ }
+
